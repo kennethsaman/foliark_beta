@@ -32,6 +32,10 @@ body {
     font-size: 4vw;
 }
 
+.text-light {
+    color: white;
+}
+
 
 /* general formatting ------------------------- */
 .header-padding {
@@ -48,6 +52,8 @@ body {
     padding-top: 50px;
     padding-bottom: 50px;
 }
+
+
 
 /* utils ---------------------------------- */
 
@@ -215,4 +221,13 @@ body {
 
     justify-content: end;
     overflow: hidden;
+}
+
+
+
+/* FOOTER ---------------------- */
+
+.footer {
+    height: 300px;
+    background-color: rgb(54, 54, 54);
 }
