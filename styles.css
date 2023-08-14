@@ -1,0 +1,218 @@
+/* fontssssss */
+
+body {
+    font-family: 'Jost', sans-serif;
+    font-size: 1em;
+    font-weight: 300;
+    color: black;
+    margin: 0;
+}
+
+.text-navbar-menu {
+    font-family: 'Jost', sans-serif;
+    font-size: 1.2em;
+    font-weight: 400;
+}
+
+.text-section-header {
+    font-family: 'Jost', sans-serif;
+    font-size: 2em;
+    font-weight: 300;
+}
+
+.text-subheader {
+    font-family: 'Jost', sans-serif;
+    font-size: 1.2em;
+    font-weight: 400;
+    color: black;
+}
+
+.text-highlight {
+    font-family: 'Bodoni Moda', serif;
+    font-size: 4vw;
+}
+
+
+/* general formatting ------------------------- */
+.header-padding {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.section {
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.section-footer {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+/* utils ---------------------------------- */
+
+.border {
+    /* border: 1px solid red; */
+}
+
+
+
+
+/* navbar---------------------------- */
+
+.navbar {
+    position: fixed;
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, .8);
+}
+
+.nav-brand {
+    align-items: end;
+    display: flex;
+    text-decoration: none;
+}
+
+.nav-title {
+    font-family: 'Jost', sans-serif;
+    font-size: 2em;
+    font-weight: 400;
+    color: black;
+}
+
+.nav-logo {
+    padding-right: 10px;
+}
+
+.nav-logo img {
+    height: 50px;
+    object-fit: contain;
+}
+
+.nav-spacer {
+    display: flex;
+    width: 200px;
+}
+
+.nav-menu {
+    display: grid;
+    padding-left: 0;
+}
+
+.nav-item {
+    list-style: none;
+}
+
+.nav-link {
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    width: 60px;
+    transition: 0.7s ease;
+    padding: 20px 20px;
+}
+
+
+
+
+
+
+
+/* cover image -------------------------------------------------*/
+.spacer {
+    height: 100px;
+}
+
+.cover-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    
+    width: 100%;
+    height: 80vh;
+
+    /* border-style: solid;
+    border-width: 1px;
+    border-color: black; */
+}
+
+.cover-image img {
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+
+
+
+
+/* projects ----------------------------*/
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    row-gap: 20px;
+}
+
+.item {
+    aspect-ratio: 1;
+    margin: 10px;
+
+    /* background-color: bisque; */
+}
+
+.item-text  {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    /* background-color: brown; */
+}
+
+.item-img  {
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.item-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+
+
+
+/* about---------------------- */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 50px;
+    row-gap: 20px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 50px;
+}
+
+.item-team {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+
+    justify-content: end;
+    overflow: hidden;
+}
