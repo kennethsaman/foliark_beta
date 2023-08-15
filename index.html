@@ -30,33 +30,32 @@
             <div class="nav-title">
                 Foliark
             </div>
-            
         </a>
 
         <!-- <div class="nav-spacer border"></div> -->
 
         <ul class="nav-menu border">
             <li class="nav-item border">
-                <a href="./index.html" class="nav-link border">Home</a>
-                <a href="#" class="nav-link border">Works</a>
-                <a href="#" class="nav-link border">About</a>
-                <a href="#" class="nav-link border">Services</a>
+                <a href="#home" class="nav-link border">Home</a>
+                <a href="#works" class="nav-link border">Works</a>
+                <a href="#services" class="nav-link border">Services</a>
+                <a href="#about" class="nav-link border">About</a>
             </li>
         </ul>
 
-        <!-- <div class="hamburger">
+        <div class="hamburger">
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
-        </div> -->
+        </div>
     </nav>
 
 
 
     <!-- cover image -->
-    <div class="spacer"></div>
+    <div class="spacer-top"></div>
 
-    <div class="section-x">
+    <div class="section-x" id="home">
         <style>
             .cover-image {
                 background-image: url("./assets/content/cover image.png");
@@ -73,8 +72,8 @@
 
     <!-- projects -->
     
-    <div class="section">
-        <div class="text-section-header header-padding">
+    <div class="section" id="works">
+        <div class="text-section-header header-padding text-center">
             OUR PROJECTS
         </div>
     
@@ -124,18 +123,69 @@
             
         </div>
 
-        <div class="section-footer">
-            see all projects
+        <div class="section-footer text-center">
+            <button class="text-subheader center">SEE MORE PROJECTS</button>
         </div>
 
         <div class="spacer"></div>
 
     </div>
+
+    <!-- SERVICES -->
+
+    <div class="section" id="services">
+        <div class="text-section-header header-padding text-center">
+            OUR SERVICES
+        </div>
+
+        <div class="services-grid">
+
+            <div class="service-card">
+                <div class="service-img">
+                    <img src="./assets/content/V1A2R1.jpg" alt="service image">
+                </div>
+
+                <div class="service-title">
+                    <div class="text-subheader">
+                        Residential Design
+                    </div>
+                    <button>BOOK NOW</button>
+                </div>                
+            </div>
+
+            <div class="service-card">
+                <div class="service-img">
+                    <img src="./assets/content/Scandi Living Room v2 (1).png" alt="service image">
+                </div>
+                <div class="service-title">
+                    <div class="text-subheader">
+                        Commercial Design
+                    </div>
+                    <button>BOOK NOW</button>
+                </div>   
+            </div>
+
+            <div class="service-card">
+                <div class="service-img">
+                    <img src="./assets/content/modern stairs 1.png" alt="service image">
+                </div>
+                <div class="service-title">
+                    <div class="text-subheader">
+                        Interior Fit-outs
+                    </div>
+                    <button>BOOK NOW</button>
+                </div>   
+            </div>            
+
+        </div>
+
+        <div class="spacer"></div>
+    </div>
     
 
 
     <!-- about -->
-    <div class="section">
+    <div class="section" id="about">
         <div class="about-grid">
             <div class="item-text">
                 <div class="text-highlight">
@@ -157,7 +207,7 @@
         
         <div class="spacer"></div>
 
-        <div class="text-section-header header-padding">
+        <div class="text-section-header header-padding text-center">
             MEET THE TEAM
         </div>
 
@@ -265,6 +315,12 @@
         </div>
     </div>
     
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+    <!--javascript-->
+    <script src="main.js"></script>
 
     
 </body>
