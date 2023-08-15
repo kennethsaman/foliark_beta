@@ -1,5 +1,15 @@
+
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
+const navbarLinks = document.querySelectorAll(".navbar a");
+
+const expandProjects = document.querySelector("#expand-projects");
+const hiddenProjects = document.querySelectorAll(".hidden");
+
+// const expandProjects = document.querySelector("#expand-projects");
+// const hideProjects = document.querySelector("#hide-projects");
+// const hiddenProjects = document.querySelectorAll(".hidden");
+
 
 
 hamburger.addEventListener("click", () => {
@@ -18,7 +28,7 @@ hamburger.addEventListener("click", () => {
 //   NAVBAR SCROLLING
 
 document.addEventListener("DOMContentLoaded", function () {
-    const navbarLinks = document.querySelectorAll(".navbar a");
+    
 
     navbarLinks.forEach(link => {
         link.addEventListener("click", scrollToSection);
@@ -30,10 +40,22 @@ document.addEventListener("DOMContentLoaded", function () {
         const targetSection = document.querySelector(targetId);
 
         if (targetSection) {
-            const yOffset = -150; // Adjust this value to offset the scrolling position if needed
-            const y = targetSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
+            const yOffset = -150;
+            const y = targetSection.getBoundingClientRect().top + yOffset;
 
             window.scrollTo({ top: y, behavior: "smooth" });
         }
     }
 });
+
+
+expandProjects.addEventListener("click", () => {
+    console.log(hiddenProjects);
+    hiddenProjects.forEach(p => p.classList.toggle("hide"));
+    
+    if (expandProjects.textContent === "SEE MORE PROJECTS") {
+        expandProjects.textContent = "SEE LESS";
+    } else {
+        expandProjects.textContent = "SEE MORE PROJECTS";
+    }
+})
