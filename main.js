@@ -1,15 +1,11 @@
 
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
-const navbarLinks = document.querySelectorAll(".navbar a");
 
 const expandProjects = document.querySelector("#expand-projects");
 const hiddenProjects = document.querySelectorAll(".hidden");
 
-// const expandProjects = document.querySelector("#expand-projects");
-// const hideProjects = document.querySelector("#hide-projects");
-// const hiddenProjects = document.querySelectorAll(".hidden");
-
+const navLinks = document.querySelectorAll('a[href^="#"]');
 
 
 hamburger.addEventListener("click", () => {
@@ -22,33 +18,6 @@ hamburger.addEventListener("click", () => {
     navMenu.classList.remove("active");
   }))
 
-
-
-
-//   NAVBAR SCROLLING
-
-document.addEventListener("DOMContentLoaded", function () {
-    
-
-    navbarLinks.forEach(link => {
-        link.addEventListener("click", scrollToSection);
-    });
-
-    function scrollToSection(e) {
-        e.preventDefault();
-        const targetId = e.currentTarget.getAttribute("href");
-        const targetSection = document.querySelector(targetId);
-
-        if (targetSection) {
-            const yOffset = -150;
-            const y = targetSection.getBoundingClientRect().top + yOffset;
-
-            window.scrollTo({ top: y, behavior: "smooth" });
-        }
-    }
-});
-
-
 expandProjects.addEventListener("click", () => {
     console.log(hiddenProjects);
     hiddenProjects.forEach(p => p.classList.toggle("hide"));
@@ -59,3 +28,15 @@ expandProjects.addEventListener("click", () => {
         expandProjects.textContent = "SEE MORE PROJECTS";
     }
 })
+
+
+
+navLinks.forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
