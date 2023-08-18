@@ -31,6 +31,12 @@ body {
     font-size: calc(2.2em + 2.2vw);
 }
 
+@media only screen and (max-width: 530px) {
+    .text-highlight {
+        font-size: calc(1.2em + 1.2vw);
+    }
+}
+
 .text-light {
     color: white;
 }
@@ -118,6 +124,10 @@ button:hover {
 .bg-span {
     background-color: rgb(59, 59, 59);
     color: white;
+}
+
+.modal-open {
+    overflow: hidden;
 }
 
 
@@ -290,10 +300,16 @@ button:hover {
     column-gap: 10px;
 }
 
+.project:hover {
+    opacity: 50%;
+    cursor: pointer;
+}
+
 .item-text  {
     display: flex;
-    justify-content: start;
+    text-align: start;
     align-items: center;
+    /* overflow-wrap: break-word; */
 
     /* background-color: brown; */
 }
@@ -344,6 +360,65 @@ button:hover {
 }
 
 
+/* modal ----------------------------------------------------- */
+
+.modal {
+    /* display: block; */
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    overflow: scroll;
+}
+
+.modal-active {
+    display: block;
+}
+
+.modal-gallery {
+    display: grid;
+    row-gap: 10px;
+    /* padding: 5% auto; */
+    width: 80%;
+    margin: 20px auto;
+}
+
+.modal-gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+.modal-gallery img[src=""] {
+    display: none;
+}
+
+.modal-options {
+    display: flex;
+    height: auto;
+    overflow: hidden;
+    /* justify-content: space-around; */
+    /* align-items: center; */
+    padding: 10px;
+    
+    border: 1px solid gray;
+}
+
+.modal-options img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+
+
+
 /* services ------------------------------- */
 .services-grid {
     display: grid;
@@ -387,16 +462,6 @@ button:hover {
     .services-grid {
         grid-template-columns: 1fr;
     }
-
-    /* .service-card {
-        grid-template-columns: 1fr 1fr;
-        align-items: center;
-        text-align: justify;
-    } */
-
-    /* .service-img {
-        grid-area: 1/2/2/3;
-    } */
 }
 
 
